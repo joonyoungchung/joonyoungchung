@@ -22,7 +22,7 @@ def message(payload):
     user_id = event.get('user')
     text = event.get('text')
 
-    message = "Hi <@" + user_id + ">, your message was: " + text.replace("<@"+BOT_ID+">","");
+    message = "Hello <@" + user_id + ">, your message was: " + text.replace("<@"+BOT_ID+">","");
     if BOT_ID != user_id:
         bot.chat_postMessage(channel=channel_id, text=message)
 
